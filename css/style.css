@@ -495,37 +495,41 @@ button {
 
 /* ===== HERO SECTION ===== */
 .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    padding: var(--spacing-32) 0 var(--spacing-20);
-    overflow: hidden;
-    background-color: var(--light);
+    padding-top: 120px;
 }
 
 .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    z-index: var(--z-10);
+    padding-top: 40px;
     text-align: center;
-    gap: var(--spacing-16);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero-text {
     max-width: 800px;
+    margin: 0 auto 40px;
 }
 
 .hero-title {
     font-size: var(--font-size-6xl);
-    font-weight: var(--font-weight-extrabold);
-    line-height: 1.2;
+    font-weight: var(--font-weight-bold);
     margin-bottom: var(--spacing-6);
-    color: var(--dark);
+    line-height: 1.2;
 }
 
 .hero-subtitle {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-2xl);
     color: var(--gray);
     margin-bottom: var(--spacing-8);
+    line-height: 1.5;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -533,9 +537,9 @@ button {
 
 .hero-cta {
     display: flex;
-    justify-content: center;
     gap: var(--spacing-4);
-    margin-bottom: var(--spacing-16);
+    margin-top: var(--spacing-8);
+    justify-content: center;
 }
 
 .hero-bg {
@@ -544,19 +548,23 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: var(--z-0);
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-bg-pattern {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background-image: radial-gradient(var(--primary-lighter) 1px, transparent 1px);
     background-size: 20px 20px;
     opacity: 0.05;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
 }
 
 .scroll-indicator {
