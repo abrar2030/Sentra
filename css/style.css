@@ -503,14 +503,15 @@ button {
 
 .hero-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
     gap: var(--spacing-16);
 }
 
 .hero-text {
-    flex: 1;
-    max-width: 600px;
+    max-width: 800px;
 }
 
 .hero-title {
@@ -525,69 +526,16 @@ button {
     font-size: var(--font-size-xl);
     color: var(--gray);
     margin-bottom: var(--spacing-8);
-    max-width: 500px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-cta {
     display: flex;
+    justify-content: center;
     gap: var(--spacing-4);
-    margin-top: var(--spacing-8);
-}
-
-.hero-image {
-    flex: 1;
-    max-width: 500px;
-    position: relative;
-}
-
-.hero-image-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.hero-backdrop {
-    position: absolute;
-    top: 10%;
-    right: 10%;
-    width: 80%;
-    height: 80%;
-    background-color: var(--primary-lighter);
-    opacity: 0.1;
-    border-radius: var(--border-radius-2xl);
-    transform: rotate(-5deg);
-    z-index: 1;
-}
-
-.hero-shape {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 200px;
-    height: 200px;
-    background-color: var(--primary);
-    opacity: 0.05;
-    border-radius: var(--border-radius-full);
-    z-index: 0;
-}
-
-.hero-shape-2 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 150px;
-    height: 150px;
-    background-color: var(--secondary);
-    opacity: 0.05;
-    border-radius: var(--border-radius-full);
-    z-index: 0;
-}
-
-.hero-image img {
-    position: relative;
-    z-index: 2;
-    border-radius: var(--border-radius-2xl);
-    box-shadow: var(--shadow-xl);
+    margin-bottom: var(--spacing-16);
 }
 
 .hero-bg {
@@ -600,16 +548,24 @@ button {
     overflow: hidden;
 }
 
-.scroll-indicator {
+.hero-bg-pattern {
     position: absolute;
-    bottom: var(--spacing-8);
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--primary-lighter) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.05;
+}
+
+.scroll-indicator {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-2);
-    z-index: 10;
+    margin-top: var(--spacing-16);
 }
 
 .mouse {
@@ -885,7 +841,7 @@ button {
 /* ===== TIMELINE ===== */
 .timeline {
     position: relative;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: var(--spacing-8) 0;
 }
@@ -920,7 +876,7 @@ button {
 
 .timeline-content {
     position: relative;
-    width: calc(50% - 40px);
+    width: calc(50% - 60px);
     padding: var(--spacing-6);
     background-color: var(--white);
     border-radius: var(--border-radius-lg);
@@ -995,6 +951,11 @@ button {
 
 .timeline-description {
     color: var(--gray);
+    line-height: 1.6;
+}
+
+.timeline-description p {
+    margin-bottom: var(--spacing-4);
 }
 
 .timeline-description ul {
