@@ -1189,6 +1189,7 @@ button {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    min-height: 260px;
 }
 
 .portfolio-title {
@@ -1196,6 +1197,7 @@ button {
     font-weight: var(--font-weight-semibold);
     color: var(--dark);
     margin-bottom: var(--spacing-3);
+    line-height: 1.2;
 }
 
 .portfolio-tags {
@@ -1218,6 +1220,11 @@ button {
     color: var(--gray);
     margin-bottom: 0;
     flex-grow: 1;
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 /* ===== CERTIFICATIONS SECTION ===== */
