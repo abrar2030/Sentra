@@ -1104,6 +1104,9 @@ button {
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: var(--transition);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
 }
 
 .portfolio-card:hover {
@@ -1115,6 +1118,7 @@ button {
     position: relative;
     height: 240px;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .portfolio-img img {
@@ -1182,6 +1186,9 @@ button {
 
 .portfolio-content {
     padding: var(--spacing-6);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .portfolio-title {
@@ -1210,6 +1217,7 @@ button {
 .portfolio-description {
     color: var(--gray);
     margin-bottom: 0;
+    flex-grow: 1;
 }
 
 /* ===== CERTIFICATIONS SECTION ===== */
